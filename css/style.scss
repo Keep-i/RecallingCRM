@@ -1,1 +1,515 @@
-//Questo è il nostro documento per i CSS
+// CSS general style for Recalling CRM
+// Author: Michele Petrone& Marco Aurelio
+// Client: TAG Innovation School
+// Project name: Recalling CRM
+
+/* 
+	1.General Variabiles
+		1.1 Font variabiles
+		1.2 Layout color variabiles
+		1.3 General Mixin
+	
+	n.Import other SCSS
+	
+	
+	
+	
+	
+ */
+
+/*************************************** 1. General Variabiles ***************************************/
+
+	// 1.1 Font variabiles
+	$fontStack: 'Open Sans', sans-serif;
+	
+	$textDarkestGray: rgba(74, 74, 74, 1);
+	$textMediumGray: rgba(155, 155, 155, 1);
+	$textLightestGray: rgba(192, 192, 192, 1);
+	$crmDarkYellowTextOnButton: rgba(245, 166, 35, 1);
+	
+	// 1.2 Layout colors variabiles
+	$crmLightBlue: rgba(41, 182, 246, 1);
+	$crmLightRed: rgba(255, 87, 34, 1);
+	$crmLightGreen: rgba(23, 231, 119, 1);
+	$crmLightYellow: rgba(248, 231, 28, 1);
+	$crmButtonLightGray: rgba(234, 234, 234, 1);
+	$crmSidebarDarkBlue: rgba(24, 40, 56, 1); 
+	
+	// 1.3 Mixin for Border Radius
+	
+	@mixin border-radius($radius) {
+		-webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		-o-border-radius: $radius;
+		border-radius: $radius;
+	}
+	
+	@mixin transition($value) {
+		-webkit-transition: $value;
+		-moz-transition: $value;
+		-ms-transition: $value;
+		-o-transition: $value;
+		transition: $value;
+	}
+	
+	$radius: 3px;
+	
+/*************************************** 2. General CSS ***************************************/
+	
+	*{
+		box-sizing: border-box;
+	}
+	
+	a{
+		text-decoration: none;
+		text-transform: none;
+		color: inherit;
+		@include transition(all 0.2s linear);
+	}
+	
+	html, body{
+		height: 100%;
+	}
+	
+	body{
+		background: #F5F5F5;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1em;
+		min-height: 100%;
+	}
+	
+	img{
+		display: block;
+		max-width: 100%;
+	}
+	
+	input{
+		border: 1px solid #e0e0e0;
+		border-radius: 3px;
+		display: block;
+		width: 100%;
+		padding: 16px 18px;
+		margin: 20px 0;
+		color: $textLightestGray;
+		font-weight: 300;
+	}
+	
+	input.error{
+		background: lighten($crmLightRed, 35%);
+		color: $crmLightRed;
+	}
+	
+	.button{
+		margin: 0;
+		width: auto;
+		display: inline-block;
+		min-width: 150px;
+		padding: 12px 10px;
+		background: $crmLightBlue;
+		@include border-radius(100px);
+		color: #fff;
+		font-size: 0.85em;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		float: right;
+		margin: 12px 28px 0 0;
+	}
+	
+	.button.error{
+		background: $crmLightRed;
+	}
+	
+	.bgPositive{
+		background: $crmLightGreen;
+		border: none!important;
+	}
+		
+	.bgNegative{
+		background: $crmLightRed;
+		border: none!important;
+	}
+	
+	.bgRecall{
+		background: $crmLightYellow;
+		border: none!important;
+	}
+	
+	cf::after, cf::before{
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+	
+	.overlay{
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0, .85);
+		display: block;
+	}
+	
+	.popup{
+		width: 500px;
+		height: auto;
+		@include border-radius($radius);
+		padding: 20px 30px 40px;
+		background: #fff;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		i{
+			float: right;
+			color: $textDarkestGray;
+		}
+		
+		img{
+			display: block;
+			margin: 10px auto;
+		}
+		
+		h1{
+			font-weight: 300;
+			text-align: center;
+			font-size: 2.5em;
+		}
+		
+		.popupContainer{
+			display: inline-block;
+			
+			img{
+				width: 85%;
+				height: auto;
+			}
+			
+			.buttonContainer{
+				margin: 0 0 0 60px;
+			}
+			
+			.button{
+				display: inline-block;
+				float: none;
+				margin-right: 15px;
+			}
+		}
+	}
+	
+	p{
+		font-size: 1em;
+		color: $textLightestGray;
+	}
+	
+	
+	
+	
+/*************************************** n. Login Page ***************************************/
+	
+	.login_form{
+		width: 500px;
+		background: #fff;
+		border: 1px solid #e0e0e0;
+		@include border-radius($radius);
+		padding: 20px 30px 30px;
+		margin: 100px auto 0;
+		
+		img{
+			margin: 0 auto 30px;
+		}
+		
+		a {
+			color: $textLightestGray;
+			font-size: 0.75em;
+			text-decoration: underline;
+			
+		}
+		
+		a:hover {
+			color: $crmLightBlue;
+		}
+	}
+	
+	p.error{
+		color: $crmLightRed;
+	}
+	
+	/*************************************** n. Aside Menu ***************************************/
+	
+	.main_menu{
+		width: 15%;
+		background: $crmSidebarDarkBlue;
+		float: left;
+		text-align: center;
+		color: #fff;
+		padding-bottom: 10px;
+		
+		img{
+			margin: 30px auto;
+		}
+		
+		h1{
+			font-size: 1.425em;
+			font-weight: 200;
+			margin-bottom: 0;
+		}
+		
+		h3{
+			font-size: 1em;
+			font-weight: 400;
+			margin-top: 0.225em;
+		}
+		
+		>a{
+				font-size: 0.85em;
+				text-decoration: underline;
+				float: right;
+				margin-right: 10px;
+		}
+		
+		ul{
+			list-style-type: none;
+			padding: 30px 0;
+			margin: 0;
+		
+			li{
+				display: block;
+				padding: 20px 10px;
+				font-size: 1.25em;
+				font-weight: 200;
+				border-bottom: 1px solid #78909C;
+				cursor: pointer;
+				@include transition(all 0.2s linear);
+			}
+			
+			li.active{
+				background: $crmLightBlue;
+				}
+			
+			:first-child li{
+				border-top: 1px solid #78909C;
+			}
+			
+			li:hover{
+				background: $crmLightBlue;
+			}
+		
+		}
+		
+	}
+	
+	/*************************************** n. Main Content ***************************************/
+	
+	.main_content{
+		width: 85%;
+		float: right;
+		
+		/*************************************** n. upperBar Styiling ***************************************/
+		
+		.upperBar{
+			height: 32px;
+			width: 100%;
+			margin: 0;
+			padding: 5px 0;
+			background: #e0e0e0;
+			
+			i{
+				margin-left: 10px;
+				color: $textDarkestGray;
+			}
+		}
+		
+		/*************************************** n. Labels Style ***************************************/
+		
+		.label{
+			width: 95%;
+			height: 70px;
+			border: 1px solid #e0e0e0;
+			border-left: 10px solid $crmLightBlue;
+			display: block;
+			background: #fff;
+			margin: 20px auto 0;
+			
+			.button{
+				width: auto;
+				display: inline-block;
+				min-width: 150px;
+				padding: 12px 10px;
+				background: $crmLightBlue;
+				@include border-radius(100px);
+				color: #fff;
+				font-size: 0.85em;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-align: center;
+				float: right;
+				margin: 12px 28px 0 0;
+			}
+			
+			label{
+				float: right;
+				line-height: 70px;
+				font-size: 1.5em;
+				color: $textDarkestGray;
+			}
+			
+			input{
+				border-radius: 3px;
+				display: inline-block;
+				width: 150px;
+				padding: 10px 10px;
+				margin: 12px 18px;
+				color: silver;
+				font-weight: 300;
+				float: right;
+			}
+			
+			button.bgPositive{
+				background: $crmLightGreen!important;
+			}
+				
+			button.bgNegative{
+				background: $crmLightRed;
+			}
+			
+			button.bgRecall{
+				background: $crmLightYellow;
+			}
+		}
+		
+		.positive{
+			border-left: 10px solid $crmLightGreen;
+		}
+		
+		.negative{
+			border-left: 10px solid $crmLightRed;
+		}
+		
+		.recall{
+			border-left: 10px solid $crmLightYellow;
+		}
+		
+		.ghostLabel{
+			width: 95%;
+			height: 70px;
+			background: red;
+			background-size: cover;
+			background-repeat: no-repeat; 
+			margin: 20px auto 0;
+			
+			p{
+				line-height: 70px;
+				text-transform: uppercase;
+				color: $textDarkestGray;
+				font-size: 1em;
+				margin-left: 15px;
+				font-weight: bold;
+				display: inline;
+			}
+		}
+		
+		.radiusDot {
+			width: 20px;
+			height: 20px;
+			margin: 25px 0 0 18px;
+			float: left;
+			@include border-radius(20px);
+			border: 2px solid #979797;
+		}
+		
+		.addDot
+		{
+			width: 35px;
+			height: 35px;
+			margin: 17px 0 0 18px;
+			float: left;
+			text-align: center;
+			@include border-radius(45px);
+			background: $crmLightBlue;
+			
+			i{
+				color: white;
+				margin: 6px 0 0;
+			}
+		}
+		
+		.labelName{
+			width: auto;
+			height: 70px;
+			line-height: 70px;
+			display: inline-block;
+			float: left;
+			color: $textDarkestGray;
+			margin-left: 17px;
+			font-size: 1.75em;
+		}
+		
+		.labelInfo{
+			width: auto;
+			height: 70px;
+			padding: 10px 0;
+			display: inline-block;
+			text-align: right;
+			float: right;
+			margin-right: 35px;
+			
+			.ctr{
+				text-transform: uppercase;
+				color: $textMediumGray;
+				font-size: 0.75em;
+				height: auto;
+				margin: 0;
+			}
+			
+			.ctrValue{
+				color: $textDarkestGray;
+				font-size: 1.5em;
+				height: auto;
+				margin: 0;
+			}
+		}
+		
+		/*************************************** n. subLabels Style ***************************************/
+		
+		.subLabel{
+			margin: 0 auto 10px auto;
+			width: 95%;
+			background: #e0e0e0;
+			padding-bottom: 15px;
+			
+			.button{
+				@include border-radius($radius);
+				margin-right: 15px;
+			}
+			
+			ul{
+				display: block;
+				margin: 0;
+				padding: 30px 0 0 0;
+				
+				li{
+					display: inline-block;
+					width: 24.5%;
+					text-align: center;
+					color: $textDarkestGray;
+					font-size: 2em;
+					font-weight: 300;
+					
+					p{
+						margin: 0;
+						color: $textMediumGray;
+						text-transform: uppercase;
+						font-size: 0.425em;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		
+		
+	}
+
+/*************************************** n. Import other SCSS ***************************************/
+
+
+//Import other SCSS file that controls other parts of UI
