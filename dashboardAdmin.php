@@ -23,7 +23,7 @@
 			<section class="main_content">
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna One</div>
+					<div class="labelName">Campaign One</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -32,7 +32,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Two</div>
+					<div class="labelName">Campaign Two</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -41,7 +41,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Three</div>
+					<div class="labelName">Campaign Three</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -50,7 +50,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Four</div>
+					<div class="labelName">Campaign Four</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -59,7 +59,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Five</div>
+					<div class="labelName">Campaign Five</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -68,7 +68,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Six</div>
+					<div class="labelName">Campaign Six</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -77,7 +77,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Seven</div>
+					<div class="labelName">Campaign Seven</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -86,7 +86,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Eight</div>
+					<div class="labelName">Campaign Eight</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -95,7 +95,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Nine</div>
+					<div class="labelName">Campaign Nine</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>
@@ -104,7 +104,7 @@
 				</section>
 				
 				<section class="label cf animated fadeInUp">
-					<div class="labelName">Campagna Ten</div>
+					<div class="labelName">Campaign Ten</div>
 					<a href="#"><div class="button">view report</div></a>
 					<div class="labelInfo">
 						<h3 class="ctr">ctr:</h3>

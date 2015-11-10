@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include'header.php' ?>
 
 	<body>
 		<!--[if lt IE 8]>
